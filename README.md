@@ -1,1 +1,24 @@
-# Bash-Custom
+# How to run
+- Download all files
+- make
+- ./shell
+- rm shell if you want to complie shell again
+# Assumptions
+- Erroneous commands are stored in log
+- hop .. .. is interpreted as hop .. ; hop .. and similar for others (prev_path updates as such.)
+- reveal - and hop - without any previous directory will lead to an error
+- entire line colored on reveal -l
+- any commands with the substring "log" would not be stored as its implementation is too tedious (allowed in doubts doc)
+- the execution time is printed before the prompt for neatness and in case multiple commands finish execution
+- When erroneous commands are run in background they would be accepted intially but upon next input error would be thrown for invalid command.
+- placing & in front of self implemented commands will run them as usual
+- output status of background commands is printed upon taking the next input to avoid situations where user is typing and a message is displayed.
+- Virtual memory storage is displayed in bytes
+- The alias is logged in the log file
+- piping might not work if the command needs no input.
+- file > file1 > file2 would not work as it is not handled in a standard way across teminals. file > file1 ; file 1> file2 should be used instead.
+- Piplened commands ran sequentially
+- Only command stored for activities (sleep instead of sleep 5)
+- Default time not assumed for neonate
+- the copilot screenshots are compiled in the Ai_usage pdf.
+- Max path lengths, max commands and other similar variales are defined as macros and are whatever is mentioned in code.

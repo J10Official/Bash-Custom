@@ -1,0 +1,15 @@
+hop /home
+hop /home/jaitn
+hop /home/jatin
+hop .. .. ..
+hop /home
+hop ./OSN
+hop ~/1
+hop ..
+hop /home
+hop /home/jatin
+hop ~/1
+hop ..
+clear
+hop ..
+clear

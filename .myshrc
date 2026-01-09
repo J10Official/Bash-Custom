@@ -1,0 +1,4 @@
+reveall =  reveal
+reveala = reveal -a
+revealal = reveal -a -l
+prev = hop -
