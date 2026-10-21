@@ -1,0 +1,5 @@
+# Local build products and runtime history
+/shell
+/a.out
+*.o
+/log.txt
