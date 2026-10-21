@@ -1,9 +1,32 @@
-# How to run
-- Download all files
-- make
-- ./shell
-- rm shell if you want to complie shell again
-# Assumptions
+# Custom POSIX Shell
+
+A C coursework shell using Unix process and filesystem interfaces. It includes custom navigation/listing commands, command history, process inspection, aliases, signal handling, and background-process tracking.
+
+## Build and run
+
+Use Linux or a compatible Unix environment with GCC and Make. Run from the repository root so the existing configuration and log paths resolve as intended.
+
+```bash
+make
+./shell
+```
+
+The [Makefile](Makefile) builds the executable named `shell`. After changing source files, rebuild with `make clean` followed by `make`; the current Makefile does not declare source-file prerequisites on the executable target.
+
+## Explore the implementation
+
+| Area | Files |
+|---|---|
+| Input and command execution | [main.c](main.c), [command_handler.c](command_handler.c) |
+| Navigation and listing | [directory.c](directory.c), [seek.c](seek.c) |
+| History and aliases | [log.c](log.c), [alias.c](alias.c), [.myshrc](.myshrc) |
+| Processes and signals | [processlist.c](processlist.c), [proclore.c](proclore.c), [signals.c](signals.c), [neonate.c](neonate.c) |
+| Network-related functionality | [networking.c](networking.c) |
+
+Try ordinary commands such as `pwd` and `sleep 1`, then inspect the source for the supported syntax of `hop`, `reveal`, `seek`, and the other custom commands. The original behavioral notes below document important differences and limitations.
+
+## Original implementation assumptions
+
 - Erroneous commands are stored in log
 - hop .. .. is interpreted as hop .. ; hop .. and similar for others (prev_path updates as such.)
 - reveal - and hop - without any previous directory will lead to an error
